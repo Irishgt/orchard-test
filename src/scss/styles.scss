@@ -1,0 +1,26 @@
+// global variables
+@use "variables" as *;
+
+// responsive breakpoints mixins for media queries
+@use "mixins/breakpoints" as *;
+
+// base styles
+@use "base";
+
+// utility classes
+@use "utilities/utilities";
+
+// containers
+@use "layout/layout";
+
+// gallery component styles
+@use "components/gallery";
+
+// gallery modal component styles
+@use "components/gallery-modal";
+
+// content block styles
+@use "components/content-block";
+
+// import card component styles
+@use "components/card";

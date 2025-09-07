@@ -1,0 +1,20 @@
+{{#each images}}
+  <li class="cards__item">
+    <a  class="cards__link" role="link" aria-labelledby="card-title-{{@index}}">
+      <figure class="cards__media">
+        <img src="{{image}}" alt="{{alt}}" loading="lazy">
+        {{#if title}}
+          <!-- visually hidden caption for screen readers -->
+          <figcaption class="visually-hidden">{{title}}</figcaption>
+        {{/if}}
+      </figure>
+
+      <div class="cards__body">
+        <div class="align-center">
+          <h3 id="card-title-{{@index}}" class="cards__title">{{title}}</h3>
+        </div>
+        <p class="cards__excerpt">{{excerpt}}</p>
+      </div>
+    </a>
+  </li>
+{{/each}}

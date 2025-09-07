@@ -1,0 +1,94 @@
+// ---------------------------------
+// BASE STYLES
+// ---------------------------------
+@use "variables" as *;
+@use "mixins/breakpoints" as *;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+}
+
+// -----------------
+// headings
+// -----------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $spacing-md;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $color-text;
+}
+
+h2 {
+  font-size: $font-size-xl;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: $spacing-sm;
+
+  @include respond-to(small) {
+    font-size: $font-size-lg;
+  }
+}
+
+// -----------------
+// paragraphs
+// -----------------
+p {
+  font-size: $font-size-base;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0 $spacing-md;
+  color: $color-text;
+
+  @include respond-to(small) {
+    font-size: $font-size-sm;
+  }
+
+  @include respond-to(xsmall) {
+    font-size: $font-size-xs;
+  }
+}
+
+// -----------------
+// labels
+// -----------------
+label {
+  color: $color-accent;
+  font-size: $font-size-sm;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+// -----------------
+// media & lists
+// -----------------
+figure {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

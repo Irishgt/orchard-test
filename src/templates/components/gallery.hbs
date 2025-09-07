@@ -1,0 +1,17 @@
+<ul class="gallery__inner-container" role="list" aria-labelledby="gallery-heading">
+  {{#each gallery.images}}
+    <li class="gallery__item">
+      <figure>
+        <!-- button triggers modal.the aria-label describes image for screen readers -->
+        <button type="button" class="gallery__button" aria-label="View image: {{this.alt}}" data-src="{{this.src}}" data-alt="{{this.alt}}">
+          <img src="{{this.src}}" alt="{{this.alt}}" loading="lazy">
+        </button>
+
+        <!-- figcaption for screen readers -->
+        {{#if this.alt}}
+          <figcaption class="visually-hidden">{{this.alt}}</figcaption>
+        {{/if}}
+      </figure>
+    </li>
+  {{/each}}
+</ul>

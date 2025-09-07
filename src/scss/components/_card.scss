@@ -1,0 +1,124 @@
+@use "../variables" as *;
+@use "../mixins/breakpoints" as *;
+
+.cards {
+  display: grid;
+  gap: $spacing-xl; // spacing between cards
+
+  // container for the cards
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: $spacing-sm;
+    list-style: none;
+    padding: 0;
+
+    // responsive: switch to horizontal scroll on medium screens
+    @include respond-to(medium) {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+  }
+
+  // individual card item
+  &__item {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
+    }
+    
+    // responsive card sizing for horizontal scroll
+    @include respond-to(medium) {
+      flex: 0 0 56%;
+      min-width: 56%;
+      scroll-snap-align: start;
+    }
+  }
+
+  // card media (image)
+  &__media {
+    position: relative;
+    flex-shrink: 0;
+    margin-bottom: $spacing-xl;
+    overflow: hidden;        
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+    }
+
+    // overlay effect on hover
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgb(0 0 0 / 30%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    // hover effects
+    .card__item:hover &,
+    .card__item:focus-within & {
+      img {
+        transform: scale(1.05);
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  // card body (text content)
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    color: $color-text;
+    text-decoration: none;   
+    outline: none;    
+  }
+
+  // card title
+  &__title {
+    font-size: $font-size-base;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    transition: background-color 0.35s ease, transform 0.35s ease;
+
+    // underline animation on hover
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: currentcolor;
+      transition: width 0.35s ease;
+    }
+
+    .card__item:hover &::after {
+      width: 100%;
+    }
+  }
+
+  // card excerpt text
+  &__excerpt {
+    color: $color-text;
+    padding: 0 $spacing-md;
+    text-align: center;
+  }
+}

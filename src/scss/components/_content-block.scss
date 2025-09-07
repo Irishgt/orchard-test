@@ -1,0 +1,31 @@
+@use "../variables" as *;
+@use "../mixins/breakpoints" as *;
+
+.content-block {
+  // main content area of the block
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md; // vertical spacing between elements
+
+    h1 {
+      padding-bottom: $spacing-md;
+      border-bottom: 1px solid $color-text; // underline for section heading
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 11; // limits paragraph to 11 lines
+      text-overflow: ellipsis; // adds "..."
+      text-align: left;
+    }
+  }
+
+  // callout section inside the content block
+  &__callout {
+    display: grid;
+    gap: $spacing-sm; // spacing between callout items
+  }
+}

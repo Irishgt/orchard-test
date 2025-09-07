@@ -1,0 +1,23 @@
+@use "variables" as *;
+@use "mixins/breakpoints" as *;
+
+.main {
+  // main container for page content
+  &__container {
+    display: grid;
+    gap: $spacing-section; // spacing between sections
+    padding: $spacing-main; // default page padding
+
+    //increase padding and spacing
+    @include respond-to(medium) {
+      padding: $spacing-xxl;
+      gap: $spacing-xxl; 
+    }
+
+    //reduce padding and spacing
+    @include respond-to(xsmall) {
+      padding: $spacing-lg;
+      gap: $spacing-lg; 
+    }
+  }
+}

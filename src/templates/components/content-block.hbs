@@ -1,0 +1,18 @@
+<div class="content-block" role="region" aria-labelledby="content-block-heading">
+  <div class="content-block__content">
+    <h2 id="content-block-heading" class="content-block__heading">{{gallery.headline}}</h2>
+
+    <!-- main text content -->
+    <p class="content-block__text">{{gallery.blockText}}</p>
+  </div>
+
+  {{#if gallery.title}}
+    <a class="content-block__callout" href="{{gallery.calloutUrl}}" aria-labelledby="content-block-callout-label">
+      <div class="content-block__label">
+        <label id="content-block-callout-label">{{gallery.title}}</label>
+      </div>
+
+      <p><strong>{{gallery.description}}</strong></p>
+    </a>
+  {{/if}}
+</div>

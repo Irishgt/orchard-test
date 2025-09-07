@@ -1,0 +1,51 @@
+{
+  "gallery": {
+    "headline": "What does cooking mean?",
+    "blockText": "Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...",
+    "title": "The Perfect Egg",
+    "description": "Keep water between 67 and 68°C for a flavourful, tender yolk",
+    "images": [
+      {
+        "src": "assets/img/left.png",
+        "alt": "Food wrapped in twine simmering in a pot",
+        "fallback": { "src": "assets/img/left.png" }
+      },
+      {
+        "src": "assets/img/right-top.png",
+        "alt": "Soft-boiled eggs on a tray",
+        "fallback": { "src": "assets/img/right-top.png" }
+      },
+      {
+        "src": "assets/img/right-bottom.png",
+        "alt": "A Chef arranging ingredients",
+        "fallback": { "src": "assets/img/right-bottom.png" }
+      }
+    ]
+  },
+  "cards": {
+  "headline": "Taste the Colours",
+    "images" : [
+      {
+        "id": "red",
+        "image": "assets/img/red.png",
+        "title": "RED",
+        "alt": "A spoon with a red gelatin-like substance",
+        "excerpt": "Red foods remind us of berries and soft fruits, so we anticipate a sweet taste."
+      },
+      {
+        "id": "green",
+        "image": "assets/img/green.png",
+        "title": "Green",
+        "alt": "A spoon with green jelly",
+        "excerpt": "Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours."
+      },
+      {
+        "id": "white",
+        "image": "assets/img/white.png",
+        "title": "White",
+        "alt": "A spoon with white cream",
+        "excerpt": "White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat."
+      }
+    ]
+  }
+}
