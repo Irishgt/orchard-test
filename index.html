@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orchard</title>
+    <meta name="description" content="Orchard: fresh fruits, local produce, and more.">
+
+    <!-- favicon -->
+    <link rel="icon" href="https://www.orchard.com.au/wp-content/uploads/2024/01/favicon.ico" type="image/x-icon">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  
+  <body>
+    <main id="main" role="main">
+      <div class="main__container">
+
+          <!-- gallery section -->
+          <section class="gallery" aria-labelledby="gallery-heading">
+            <ul class="gallery__inner-container" role="list" aria-labelledby="gallery-heading">
+                <li class="gallery__item">
+                  <figure>
+                    <!-- button triggers modal.the aria-label describes image for screen readers -->
+                    <button type="button" class="gallery__button" aria-label="View image: Food wrapped in twine simmering in a pot" data-src="assets/img/left.png" data-alt="Food wrapped in twine simmering in a pot">
+                      <img src="assets/img/left.png" alt="Food wrapped in twine simmering in a pot" loading="lazy">
+                    </button>
+            
+                    <!-- figcaption for screen readers -->
+                      <figcaption class="visually-hidden">Food wrapped in twine simmering in a pot</figcaption>
+                  </figure>
+                </li>
+                <li class="gallery__item">
+                  <figure>
+                    <!-- button triggers modal.the aria-label describes image for screen readers -->
+                    <button type="button" class="gallery__button" aria-label="View image: Soft-boiled eggs on a tray" data-src="assets/img/right-top.png" data-alt="Soft-boiled eggs on a tray">
+                      <img src="assets/img/right-top.png" alt="Soft-boiled eggs on a tray" loading="lazy">
+                    </button>
+            
+                    <!-- figcaption for screen readers -->
+                      <figcaption class="visually-hidden">Soft-boiled eggs on a tray</figcaption>
+                  </figure>
+                </li>
+                <li class="gallery__item">
+                  <figure>
+                    <!-- button triggers modal.the aria-label describes image for screen readers -->
+                    <button type="button" class="gallery__button" aria-label="View image: A Chef arranging ingredients" data-src="assets/img/right-bottom.png" data-alt="A Chef arranging ingredients">
+                      <img src="assets/img/right-bottom.png" alt="A Chef arranging ingredients" loading="lazy">
+                    </button>
+            
+                    <!-- figcaption for screen readers -->
+                      <figcaption class="visually-hidden">A Chef arranging ingredients</figcaption>
+                  </figure>
+                </li>
+            </ul>
+            <!-- modal -->
+            <div class="gallery-modal visually-hidden" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-heading">
+              <div class="gallery-modal__overlay"></div>
+            
+              <figure class="gallery-modal__content">
+                <!-- modal heading for screen readers -->
+                <h2 id="gallery-modal-heading" class="visually-hidden">image larger view</h2>
+            
+                <!-- close button -->
+                <button class="gallery-modal__close" aria-label="Close modal">&times;</button>
+            
+                <!-- image with descriptive alt text dynamically populated -->
+                <img class="gallery-modal__image" src="" alt="">
+            
+                <!-- caption for screen readers -->
+                <figcaption class="gallery-modal__caption visually-hidden"></figcaption>
+              </figure>
+            </div>
+            <div class="content-block" role="region" aria-labelledby="content-block-heading">
+              <div class="content-block__content">
+                <h2 id="content-block-heading" class="content-block__heading">What does cooking mean?</h2>
+            
+                <!-- main text content -->
+                <p class="content-block__text">Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...</p>
+              </div>
+            
+                <a class="content-block__callout" href="" aria-labelledby="content-block-callout-label">
+                  <div class="content-block__label">
+                    <label id="content-block-callout-label">The Perfect Egg</label>
+                  </div>
+            
+                  <p><strong>Keep water between 67 and 68°C for a flavourful, tender yolk</strong></p>
+                </a>
+            </div>
+          </section>
+
+          <!-- cards section -->
+          <section class="cards" aria-labelledby="cards-heading">
+            <div class="align-center">
+              <h2 id="cards-heading">Taste the Colours</h2>
+            </div>
+            <ul class="cards__container" role="list">
+                <li class="cards__item">
+                  <a  class="cards__link" role="link" aria-labelledby="card-title-0">
+                    <figure class="cards__media">
+                      <img src="assets/img/red.png" alt="A spoon with a red gelatin-like substance" loading="lazy">
+                        <!-- visually hidden caption for screen readers -->
+                        <figcaption class="visually-hidden">RED</figcaption>
+                    </figure>
+              
+                    <div class="cards__body">
+                      <div class="align-center">
+                        <h3 id="card-title-0" class="cards__title">RED</h3>
+                      </div>
+                      <p class="cards__excerpt">Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="cards__item">
+                  <a  class="cards__link" role="link" aria-labelledby="card-title-1">
+                    <figure class="cards__media">
+                      <img src="assets/img/green.png" alt="A spoon with green jelly" loading="lazy">
+                        <!-- visually hidden caption for screen readers -->
+                        <figcaption class="visually-hidden">Green</figcaption>
+                    </figure>
+              
+                    <div class="cards__body">
+                      <div class="align-center">
+                        <h3 id="card-title-1" class="cards__title">Green</h3>
+                      </div>
+                      <p class="cards__excerpt">Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours.</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="cards__item">
+                  <a  class="cards__link" role="link" aria-labelledby="card-title-2">
+                    <figure class="cards__media">
+                      <img src="assets/img/white.png" alt="A spoon with white cream" loading="lazy">
+                        <!-- visually hidden caption for screen readers -->
+                        <figcaption class="visually-hidden">White</figcaption>
+                    </figure>
+              
+                    <div class="cards__body">
+                      <div class="align-center">
+                        <h3 id="card-title-2" class="cards__title">White</h3>
+                      </div>
+                      <p class="cards__excerpt">White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.</p>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+          </section>
+
+      </div>
+    </main>
+
+    <!-- main.js handles gallery and card interactions-->
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
